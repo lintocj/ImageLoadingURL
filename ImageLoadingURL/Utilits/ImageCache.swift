@@ -56,7 +56,7 @@ class ImageCacheFromURL {
 
         imageFile.addSubview(activityIndicator)
         activityIndicator.startAnimating()
-        activityIndicator.center = imageFile.center
+        activityIndicator.center = CGPoint(x: imageFile.frame.width/2, y: imageFile.frame.height/2)
 
         // if not, download image from url
         URLSession.shared.dataTask(with: url!, completionHandler: { [weak self] (data, response, error) in
